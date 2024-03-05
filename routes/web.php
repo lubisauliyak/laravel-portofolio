@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\authController;
+use App\Http\Controllers\pagesController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Laravel\Socialite\Facades\Socialite;
@@ -28,5 +29,12 @@ Route::get('/auth/logout', [authController::class, "logout"]);
 
 Route::redirect('home', 'dashboard');
 Route::get('/dashboard', function () {
-    return 'Selamat datang ' . Auth::user()->name . ' di halaman dashboard';
+    return view('dashboard.layout');
 })->middleware('auth');
+
+Route::prefix('dashboard')->middleware('auth')->group(
+    function () {
+        Route::get('/', [pagesController::class, 'index']);
+        Route::resource('/pages', pagesController::class);
+    }
+);

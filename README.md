@@ -10,3 +10,6 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 2. Redirect Auth
 3. Callback Auth
 4. Dashboard Admin
+5. Admin >> Create Page
+6. Admin >> Edit Page
+7. Admin >> Delete Page

@@ -38,8 +38,8 @@ class pagesController extends Controller
                 'containt' => 'required',
             ],
             [
-                'title.required' => 'Judul tidak boleh kosong',
-                'containt.required' => 'Pastikan isi sudah dituliskan',
+                'title.required' => 'Judul halaman tidak boleh kosong',
+                'containt.required' => 'Pastikan isi halaman sudah dituliskan',
             ]
         );
         $data = [
@@ -48,7 +48,7 @@ class pagesController extends Controller
         ];
         Pages::create($data);
 
-        return redirect()->route('pages.index')->with('success', 'Data baru berhasil ditambahkan');
+        return redirect()->route('pages.index')->with('success', 'Halaman baru berhasil ditambahkan');
     }
 
     /**
@@ -79,8 +79,8 @@ class pagesController extends Controller
                 'containt' => 'required',
             ],
             [
-                'title.required' => 'Judul tidak boleh kosong',
-                'containt.required' => 'Pastikan isi sudah dituliskan',
+                'title.required' => 'Judul halaman tidak boleh kosong',
+                'containt.required' => 'Pastikan isi halaman sudah dituliskan',
             ]
         );
         $data = [
@@ -88,7 +88,7 @@ class pagesController extends Controller
             'containt' => $request->containt,
         ];
         Pages::where('id', $id)->update($data);
-        return redirect()->route('pages.index')->with('success', $request->title . ' berhasil diperbarui');
+        return redirect()->route('pages.index')->with('success', 'Halaman ' . $request->title . ' berhasil diperbarui');
     }
 
     /**
@@ -97,6 +97,6 @@ class pagesController extends Controller
     public function destroy(string $id)
     {
         Pages::where('id', $id)->delete();
-        return redirect()->route('pages.index')->with('success', 'Data berhasil dihapus');
+        return redirect()->route('pages.index')->with('success', 'Halaman yang dipilih berhasil dihapus');
     }
 }

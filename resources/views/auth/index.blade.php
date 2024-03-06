@@ -18,7 +18,7 @@
         @endif
         <div class="col-6 mx-auto text-center px-5 py-5 border rounded bg-white">
             <h1>Login</h1>
-            <p>Silakan login dengan Akun Google yang kamu punya</p>
+            <p>Silahkan login dengan Akun Google yang kamu punya</p>
             <a href='{{ url('auth/redirect') }}' class="btn border border-primary"><img width="20px"
                     style="margin-bottom:3px; margin-right:5px" alt="Google sign-in"
                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/2048px-Google_%22G%22_logo.svg.png" />

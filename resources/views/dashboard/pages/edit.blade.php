@@ -3,7 +3,7 @@
 @section('containt')
     <form action="{{ route('pages.update', $data->id) }}" method="POST">
         @csrf
-        @method('put')
+        @method('PUT')
         <div class="mb-3">
             <label for="title" class="form-label">Judul :</label>
             <input type="text" class="form-control" name="title" id="title" aria-describedby="helpId"
@@ -11,7 +11,7 @@
 
         </div>
         <div class="mb-3">
-            <label for="containt" class="form-label">Isi :</label>
+            <label for="containt" class="form-label">Isi Halaman :</label>
             <textarea class="form-control summernote" name="containt" id="containt" rows="5">{{ $data->containt }}</textarea>
         </div>
         <div>

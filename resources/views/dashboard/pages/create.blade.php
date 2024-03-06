@@ -10,7 +10,7 @@
 
         </div>
         <div class="mb-3">
-            <label for="containt" class="form-label">Isi :</label>
+            <label for="containt" class="form-label">Isi Halaman :</label>
             <textarea class="form-control summernote" name="containt" id="containt" rows="5">{{ Session::get('containt') }}</textarea>
         </div>
         <div>

@@ -72,7 +72,7 @@
                             aria-labelledby="profileDropdown">
                             <a class="dropdown-item">
                                 <i class="mdi mdi-settings text-primary"></i>
-                                Settings
+                                Pengaturan
                             </a>
                             <a class="dropdown-item" href="{{ url('auth/logout') }}">
                                 <i class="mdi mdi-logout text-primary"></i>
@@ -93,9 +93,9 @@
             <nav class="sidebar sidebar-offcanvas" id="sidebar">
                 <ul class="nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('pages.index') }}">
-                            <i class="mdi mdi-file-document-box menu-icon"></i>
-                            <span class="menu-title">Halaman</span>
+                        <a class="nav-link" href="{{ route('profile.index') }}">
+                            <i class="mdi mdi-account menu-icon"></i>
+                            <span class="menu-title">Profil</span>
                         </a>
                     </li>
                     <li class="nav-item">
@@ -114,6 +114,19 @@
                         <a class="nav-link" href="{{ route('skill.index') }}">
                             <i class="mdi mdi-code-braces menu-icon"></i>
                             <span class="menu-title">Keahlian</span>
+                        </a>
+                    </li>
+                    <hr>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('pages.index') }}">
+                            <i class="mdi mdi-file-document-box menu-icon"></i>
+                            <span class="menu-title">Halaman</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('settingpage.index') }}">
+                            <i class="mdi mdi-settings menu-icon"></i>
+                            <span class="menu-title">Pengaturan Halaman</span>
                         </a>
                     </li>
                 </ul>
@@ -181,7 +194,11 @@
     <script>
         $(document).ready(function() {
             $('.summernote').summernote({
-                height: 200
+                height: 200,
+                toolbar: [
+                    ['font', ['bold', 'underline', 'clear']],
+                    ['para', ['ul', 'ol', 'paragraph']],
+                ]
             });
         });
     </script>

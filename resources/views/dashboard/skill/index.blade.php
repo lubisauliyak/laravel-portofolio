@@ -14,8 +14,6 @@
             <textarea class="form-control summernote" name="_desc" id="_desc" rows="5">{{ get_meta_value('_desc') }}</textarea>
         </div>
         <div>
-            <a href="{{ route('skill.index') }}" class="btn btn-secondary">
-                Kembali</a>
             <button class="btn btn-primary" name="submit" type="submit">Simpan</button>
         </div>
     </form>

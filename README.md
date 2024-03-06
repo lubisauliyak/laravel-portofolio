@@ -20,3 +20,5 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 12. Admin >> Edit Education
 13. Admin >> Delete Education
 14. Admin >> Add Skill
+15. Admin >> Edit Profile
+16. Admin >> Setting Pages

@@ -31,7 +31,7 @@
             <textarea class="form-control summernote" name="containt" id="containt" rows="5">{{ $data->containt }}</textarea>
         </div>
         <div class="mb-3">
-            <label for="info3" class="form-label">Skill :</label>
+            <label for="info3" class="form-label">Keahlian :</label>
             <input type="text" class="form-control" name="info3" id="info3" aria-describedby="helpId"
                 placeholder="Contoh: Negosiasi, ..." value="{{ $data->info3 }}" />
         </div>
